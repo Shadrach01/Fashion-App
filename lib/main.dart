@@ -1,6 +1,7 @@
 import 'package:fashion_app/common/utils/app_routes.dart';
 import 'package:fashion_app/common/utils/environment.dart';
 import 'package:fashion_app/common/utils/kstrings.dart';
+import 'package:fashion_app/src/auth/contollers/auth_notifier.dart';
 import 'package:fashion_app/src/auth/contollers/password_notifier.dart';
 import 'package:fashion_app/src/categories/controllers/category_notifier.dart';
 import 'package:fashion_app/src/entrypoint/controllers/bottom_tab_notifiers.dart';
@@ -34,6 +35,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => ProductNotifier()),
         ChangeNotifierProvider(create: (_) => ColorsSizesNotifier()),
         ChangeNotifierProvider(create: (_) => PasswordNotifier()),
+        ChangeNotifierProvider(create: (_) => AuthNotifier()),
       ],
       child: const MyApp(),
     ),
